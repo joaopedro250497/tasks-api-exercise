@@ -68,6 +68,25 @@ bundler install
 
 ## How to Initiate the Project
 
+First, you will have to create an user for PostgreSQL:
+
+```bash
+# open Postgresql Console:
+sudo -u postgres psql
+
+# alter postgres password:
+ALTER USER postgres PASSWORD 'postgres';
+
+# create a role username:
+CREATE ROLE username WITH LOGIN PASSWORD 'postgres';
+
+# set username as a superuser:
+ALTER ROLE username WITH SUPERUSER;
+
+# exit Console:
+\q
+```
+
 Create the database and run the migrations:
 
 ```bash
